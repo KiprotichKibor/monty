@@ -8,6 +8,8 @@
  */
 void f_mul(stack_t **head, unsigned int counter)
 {
+	stack_t *h = *head;
+
 	if (head == NULL || *head == NULL || (*head)->next == NULL)
 	{
 		fprintf(stderr, "L%d: can't mul, stack too short\n", counter);
@@ -16,8 +18,6 @@ void f_mul(stack_t **head, unsigned int counter)
 		free_stack(*head);
 		exit(EXIT_FAILURE);
 	}
-
-	stack_t *h = *head;
 
 	if (h->next == NULL)
 	{

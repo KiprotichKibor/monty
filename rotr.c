@@ -7,12 +7,12 @@
  */
 void f_rotr(stack_t **head, __attribute__((unused)) unsigned int counter)
 {
+	stack_t *last = *head;
+
 	if (head == NULL || *head == NULL || (*head)->next == NULL)
 	{
 		return;
 	}
-
-	stack_t *last = *head;
 
 	while (last->next)
 	{
